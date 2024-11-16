@@ -9,5 +9,5 @@ const userSchema = new mongoose.Schema({
     documentNumber: { type: String, required: true, unique: true },
 });
 
-module.exports = mongoose.model('User', userSchema);
+const User = mongoose.model('User ', userSchema);
 module.exports = User;
