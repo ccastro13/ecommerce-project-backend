@@ -11,7 +11,14 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.use('/api/products', productRoutes);
+app.use(express.json());
 app.use('/api/users', userRoutes);
+
+
+app.get('/test', (req, res) => {
+  res.send('El servidor está funcionando correctamente');
+});
+
 
 // Conectar a MongoDB
 mongoose.connect('mongodb://localhost:27017/ecommerce-db')
